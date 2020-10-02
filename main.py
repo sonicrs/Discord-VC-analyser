@@ -28,7 +28,7 @@ def log_things():
 
         try:
             with open(fname, 'r') as F: text = F.read().split("\n")
-        except:
+        except FileNotFoundError:
             text = []
 
         if len(text) >= 2 and\
