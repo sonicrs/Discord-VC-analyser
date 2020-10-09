@@ -11,8 +11,8 @@ Note that the bot only identifies users which joined the voice channel after the
 
 ## PARSING
 Since the data files are simply text, they can be parsed in many ways. In case you don't want to write a parser from scratch, a small convenience module is included which can parse one or all of the data files to a usable format. The simplest way to use it is like so:
-```
+```python
 from basic_parser import parse_all
 user_id_dict, res_lis = parse_all()
 ```
-Where `user_id_dict` is a `dict` containing user names and a respective "local ID" I.E `{'user1#XXXX': 1, 'user2#XXXX': 2, ...}`, and `res_lis` is a list of tuples sorted by voice channels of `('<channel_name>', utc_timestamp_list, conected_user_tuple_list)`, with the UTC times represented as floats and the connected users being tuples of integers (corresponding to the used IDs returned in the first argument).
+Where `user_id_dict` is a `dict` containing user names and a respective "local ID" _i.e_ `{'user1#XXXX': 1, 'user2#XXXX': 2, ...}`, and `res_lis` is a list of tuples sorted by voice channels of `('<channel_name>', utc_timestamp_list, conected_user_tuple_list)`, with the UTC times represented as floats and the connected users being tuples of integers (corresponding to the used IDs returned in the first argument).
