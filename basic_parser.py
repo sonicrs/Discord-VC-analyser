@@ -57,7 +57,7 @@ def parse_all(directory='/data', relative_path=True):
     for file in os.listdir(directory):
         if file[-4:] == '.txt':
             res_lis.append(
-                (file,) + 
+                (file[:-4],) + 
                  parse(directory + "/" + file,
                        num_users,
                        user_id_dict)[1:]
